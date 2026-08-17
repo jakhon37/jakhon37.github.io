@@ -1,5 +1,10 @@
 html {
   background: var(--paper);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 body {
@@ -20,7 +25,7 @@ h3 {
 }
 
 ::selection {
-  background: #e8dcc8;
+  background: var(--select);
   color: var(--ink);
 }
 
@@ -94,8 +99,25 @@ a:not(.skip):hover {
   color: var(--muted) !important;
 }
 
-.nav a:hover {
+.nav a:hover,
+.theme-toggle:hover {
   color: var(--ink) !important;
+}
+
+.theme-toggle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: inherit;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -150,7 +172,7 @@ a:not(.skip):hover {
 .links .sep,
 .footer .sep {
   margin: 0 0.42rem;
-  color: #b4aea5;
+  color: var(--sep);
   user-select: none;
 }
 
@@ -166,6 +188,28 @@ a:not(.skip):hover {
   object-fit: contain;
   background: transparent;
   transition: filter 0.45s ease;
+}
+
+.portrait-dark {
+  display: none;
+}
+
+html[data-theme="dark"] .portrait-light {
+  display: none;
+}
+
+html[data-theme="dark"] .portrait-dark {
+  display: block;
+  -webkit-mask-image: radial-gradient(
+    ellipse 72% 80% at 50% 44%,
+    #000 56%,
+    transparent 84%
+  );
+  mask-image: radial-gradient(
+    ellipse 72% 80% at 50% 44%,
+    #000 56%,
+    transparent 84%
+  );
 }
 
 .portrait-wrap:hover .portrait,
@@ -368,8 +412,20 @@ a:not(.skip):hover {
 
 @media print {
   html,
+  html[data-theme="dark"],
   body {
     background: #fff;
+    color-scheme: light;
+  }
+
+  html[data-theme="dark"] {
+    --paper: #fff;
+    --ink: #1a1917;
+    --muted: #5c574f;
+    --rule: #ccc;
+    --sep: #b4aea5;
+    --link: #1a1917;
+    --link-hover: #1a1917;
   }
 
   .page {
@@ -379,8 +435,17 @@ a:not(.skip):hover {
   }
 
   .skip,
-  .top {
+  .top,
+  .theme-toggle {
     display: none;
+  }
+
+  html[data-theme="dark"] .portrait-dark {
+    display: none;
+  }
+
+  html[data-theme="dark"] .portrait-light {
+    display: block;
   }
 
   a {

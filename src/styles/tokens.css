@@ -3,13 +3,27 @@
   --ink: #1a1917;
   --muted: #5c574f;
   --rule: #e4ddd4;
+  --sep: #b4aea5;
   --link: #1d4f91;
   --link-hover: #0f2f5c;
   --focus: #1d4f91;
+  --select: #e8dcc8;
   --serif: "Source Serif 4 Variable", "Iowan Old Style", "Palatino Linotype",
     Palatino, Charter, Georgia, serif;
   --sans: "Source Sans 3 Variable", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   --measure: 64rem;
   --pad: 1.5rem;
+}
+
+html[data-theme="dark"] {
+  --paper: #2b2926;
+  --ink: #f2eee8;
+  --muted: #b4ada3;
+  --rule: #4a453f;
+  --sep: #6e675e;
+  --link: #b7c9ea;
+  --link-hover: #dde6f6;
+  --focus: #b7c9ea;
+  --select: #4a4338;
 }

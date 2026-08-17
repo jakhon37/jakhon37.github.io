@@ -1,24 +1,9 @@
 ---
 import { site } from "../data/site";
+import TopBar from "./TopBar.astro";
 ---
 
-<div class="top">
-  <a class="wordmark" href="/">{site.name}</a>
-  <nav class="nav" aria-label="Primary">
-    {
-      site.nav.map((item) => (
-        <a
-          href={item.href}
-          {...(item.href.startsWith("http") || item.href.endsWith(".pdf")
-            ? { rel: "noopener noreferrer" }
-            : {})}
-        >
-          {item.label}
-        </a>
-      ))
-    }
-  </nav>
-</div>
+<TopBar />
 
 <header class="hero">
   <div class="hero-copy">
@@ -46,8 +31,15 @@ import { site } from "../data/site";
   </div>
   <figure class="portrait-wrap">
     <img
-      class="portrait"
+      class="portrait portrait-light"
       src={site.portrait.src}
+      alt={site.portrait.alt}
+      width="460"
+      height="460"
+    />
+    <img
+      class="portrait portrait-dark"
+      src="/portrait-dark.png"
       alt={site.portrait.alt}
       width="460"
       height="460"
