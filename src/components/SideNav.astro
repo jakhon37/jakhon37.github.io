@@ -22,14 +22,34 @@ import { site } from "../data/site";
       if (links[i].dataset.section) ids.push(links[i].dataset.section);
     }
 
+    var pinned = "";
+    var pinTimer = 0;
+
     function setActive(id) {
       for (var j = 0; j < links.length; j++) {
         links[j].classList.toggle("is-active", links[j].dataset.section === id);
       }
     }
 
+    function nearBottom() {
+      var root = document.documentElement;
+      return window.scrollY + window.innerHeight >= root.scrollHeight - 80;
+    }
+
     function update() {
       nav.classList.toggle("is-visible", window.scrollY > 140);
+      if (pinned) {
+        setActive(pinned);
+        return;
+      }
+
+      var lastId = ids[ids.length - 1] || "";
+      var lastEl = lastId ? document.getElementById(lastId) : null;
+      if (lastEl && (nearBottom() || lastEl.getBoundingClientRect().top < window.innerHeight * 0.58)) {
+        setActive(lastId);
+        return;
+      }
+
       var probe = window.innerHeight * 0.28;
       var current = ids[0] || "";
       for (var k = 0; k < ids.length; k++) {
@@ -38,6 +58,18 @@ import { site } from "../data/site";
       }
       if (current) setActive(current);
     }
+
+    nav.addEventListener("click", function (event) {
+      var link = event.target.closest("a[data-section]");
+      if (!link) return;
+      pinned = link.dataset.section;
+      setActive(pinned);
+      window.clearTimeout(pinTimer);
+      pinTimer = window.setTimeout(function () {
+        pinned = "";
+        update();
+      }, 800);
+    });
 
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
