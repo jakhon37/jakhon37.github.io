@@ -13,7 +13,7 @@ interface Props {
   description?: string;
 }
 
-const title = Astro.props.title ?? `${site.name} — Robotics`;
+const title = Astro.props.title ?? `${site.name} — AI Research Engineer`;
 const description = Astro.props.description ?? site.statement;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = new URL("/og.png", site.url).href;
@@ -25,7 +25,7 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${site.url}/#person`,
       name: site.name,
-      jobTitle: "AI Research Engineer, Robotics",
+      jobTitle: "AI Research Engineer",
       url: site.url,
       email: site.email,
       image: new URL(site.portrait.src, site.url).href,

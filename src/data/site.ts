@@ -1,10 +1,10 @@
 export const site = {
   name: "Jakhongir Nodirov",
   title: "AI Research Engineer",
-  focus: "Robotics",
+  focus: "Robotics · Computer Vision",
   statement:
-    "I am moving into robotics — perception, navigation, and systems that have to run on the machine.",
-  lede: "At HyVision I own inspection models that already run 24/7 on industrial equipment. I am taking that same loop — data, training, TensorRT, on-device ownership — into mobile robots: ROS 2, SLAM, and Nav2 on Jetson.",
+    "Perception and autonomy — robots, inspection systems, and models that have to run on the machine.",
+  lede: "I ship computer-vision systems on factory AOI equipment at HyVision, and I build mobile robots on Jetson: ROS 2, SLAM, Nav2, and on-device inference. Same loop in both cases — data, the model, and the hardware it has to live on.",
   affiliation: "HyVision System · Seongnam",
   location: "Seongnam, South Korea",
   email: "jakhon37@gmail.com",
