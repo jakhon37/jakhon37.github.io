@@ -24,4 +24,5 @@ export const path: PathItem[] = [
 
 export const education = {
   line: "M.S. Computer Engineering, Gachon University, 2022",
+  note: "Next: robotics — mobile platforms, perception, and on-device autonomy.",
 };

@@ -1,10 +1,10 @@
 export const site = {
   name: "Jakhongir Nodirov",
   title: "AI Research Engineer",
-  focus: "Computer Vision",
+  focus: "Robotics",
   statement:
-    "Computer vision systems that have to run on the line — industrial inspection, 3D reconstruction, and the edge.",
-  lede: "I lead defect-inspection models for AOI equipment at HyVision in Seongnam: dataset work, training, TensorRT and ONNX, then 24/7 on-device deployment in semiconductor and consumer-electronics factories.",
+    "I am moving into robotics — perception, navigation, and systems that have to run on the machine.",
+  lede: "At HyVision I own inspection models that already run 24/7 on industrial equipment. I am taking that same loop — data, training, TensorRT, on-device ownership — into mobile robots: ROS 2, SLAM, and Nav2 on Jetson.",
   affiliation: "HyVision System · Seongnam",
   location: "Seongnam, South Korea",
   email: "jakhon37@gmail.com",

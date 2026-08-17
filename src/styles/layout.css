@@ -214,6 +214,17 @@ a:not(.skip):hover {
   margin-bottom: 0.3rem;
 }
 
+.work-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.work-title a:hover {
+  color: var(--link) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.18em;
+}
+
 .work-field {
   color: var(--muted);
   font-size: 0.95rem;
@@ -289,6 +300,11 @@ a:not(.skip):hover {
 .path-edu {
   margin-top: 1.15rem;
   color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.path-note {
+  margin-top: 0.35rem;
   font-size: 0.95rem;
 }
 

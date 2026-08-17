@@ -10,7 +10,15 @@ import { work } from "../data/work";
         <article class="work">
           <p class="work-index">{String(index + 1).padStart(2, "0")}</p>
           <div>
-            <h3 class="work-title">{item.title}</h3>
+            <h3 class="work-title">
+              {item.href ? (
+                <a href={item.href} rel="noopener noreferrer">
+                  {item.title}
+                </a>
+              ) : (
+                item.title
+              )}
+            </h3>
             <p class="work-field">{item.field}</p>
             <p class="work-copy">{item.description}</p>
             {item.result && <p class="work-result">{item.result}</p>}
