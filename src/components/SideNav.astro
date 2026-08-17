@@ -1,0 +1,50 @@
+---
+import { site } from "../data/site";
+---
+
+<nav class="side-nav" aria-label="On this page" data-side-nav>
+  {
+    site.sideNav.map((item) => (
+      <a href={item.href} data-section={item.id}>
+        {item.label}
+      </a>
+    ))
+  }
+</nav>
+
+<script is:inline>
+  (function () {
+    var nav = document.querySelector("[data-side-nav]");
+    if (!nav) return;
+    var links = nav.querySelectorAll("a");
+    var ids = [];
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].dataset.section) ids.push(links[i].dataset.section);
+    }
+
+    function setActive(id) {
+      for (var j = 0; j < links.length; j++) {
+        links[j].classList.toggle("is-active", links[j].dataset.section === id);
+      }
+    }
+
+    function update() {
+      nav.classList.toggle("is-visible", window.scrollY > 140);
+      var probe = window.innerHeight * 0.28;
+      var current = ids[0] || "";
+      for (var k = 0; k < ids.length; k++) {
+        var el = document.getElementById(ids[k]);
+        if (el && el.getBoundingClientRect().top <= probe) current = ids[k];
+      }
+      if (current) setActive(current);
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    window.addEventListener("hashchange", update);
+    window.addEventListener("load", update);
+    update();
+    requestAnimationFrame(update);
+    setTimeout(update, 80);
+  })();
+</script>

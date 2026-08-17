@@ -1,6 +1,7 @@
 html {
   background: var(--paper);
   color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 html[data-theme="dark"] {
@@ -245,6 +246,81 @@ html[data-theme="dark"] .portrait-dark {
   margin-top: 4.25rem;
 }
 
+.section,
+#intro {
+  scroll-margin-top: 1.4rem;
+}
+
+.side-nav {
+  display: none;
+}
+
+@media (min-width: 1180px) {
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    position: fixed;
+    left: max(0.85rem, calc(50% - 32rem - 5.75rem));
+    top: 50%;
+    z-index: 8;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-50%) translateX(-0.55rem);
+    transition:
+      opacity 0.38s ease,
+      transform 0.38s ease,
+      visibility 0.38s;
+  }
+
+  .side-nav.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .side-nav a {
+    position: relative;
+    padding: 0.32rem 0 0.32rem 0.9rem;
+    font-size: 0.7rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted) !important;
+    text-decoration: none !important;
+  }
+
+  .side-nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--rule);
+    transform: translateY(-50%);
+    transition:
+      background 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .side-nav a:hover {
+    color: var(--ink) !important;
+  }
+
+  .side-nav a.is-active {
+    color: var(--ink) !important;
+  }
+
+  .side-nav a.is-active::before {
+    background: var(--ink);
+    transform: translateY(-50%) scale(1.35);
+  }
+}
+
 .section h2 {
   font-family: var(--sans);
   font-size: 0.78rem;
@@ -460,7 +536,8 @@ html[data-theme="dark"] .portrait-dark {
 
   .skip,
   .top,
-  .theme-toggle {
+  .theme-toggle,
+  .side-nav {
     display: none;
   }
 

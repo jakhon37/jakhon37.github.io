@@ -20,6 +20,12 @@ export const site = {
     { label: "Path", href: "#path" },
     { label: "CV", href: "/Jakhongir_Nodirov_CV.pdf" },
   ],
+  sideNav: [
+    { label: "Top", href: "#intro", id: "intro" },
+    { label: "Work", href: "#work", id: "work" },
+    { label: "Research", href: "#research", id: "research" },
+    { label: "Path", href: "#path", id: "path" },
+  ],
   links: [
     { label: "Email", href: "mailto:jakhon37@gmail.com" },
     { label: "CV", href: "/Jakhongir_Nodirov_CV.pdf" },
