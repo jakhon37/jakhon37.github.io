@@ -88,9 +88,15 @@ a:not(.skip):hover {
   text-decoration: none !important;
 }
 
+.top-end {
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+  gap: 1.15rem;
+}
+
 .nav {
   display: flex;
-  flex-shrink: 0;
   gap: 1.25rem;
   font-size: 0.92rem;
 }
@@ -106,8 +112,9 @@ a:not(.skip):hover {
 
 .theme-toggle {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1.15rem;
   border: 0;
+  border-left: 1px solid var(--rule);
   background: none;
   font: inherit;
   font-size: inherit;
@@ -188,6 +195,14 @@ a:not(.skip):hover {
   object-fit: contain;
   background: transparent;
   transition: filter 0.45s ease;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .portrait-dark {
@@ -200,16 +215,6 @@ html[data-theme="dark"] .portrait-light {
 
 html[data-theme="dark"] .portrait-dark {
   display: block;
-  -webkit-mask-image: radial-gradient(
-    ellipse 72% 80% at 50% 44%,
-    #000 56%,
-    transparent 84%
-  );
-  mask-image: radial-gradient(
-    ellipse 72% 80% at 50% 44%,
-    #000 56%,
-    transparent 84%
-  );
 }
 
 .portrait-wrap:hover .portrait,

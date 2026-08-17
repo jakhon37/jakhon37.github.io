@@ -4,21 +4,23 @@ import { site } from "../data/site";
 
 <div class="top">
   <a class="wordmark" href="/">{site.name}</a>
-  <nav class="nav" aria-label="Primary">
-    {
-      site.nav.map((item) => (
-        <a
-          href={item.href}
-          {...(item.href.startsWith("http") || item.href.endsWith(".pdf")
-            ? { rel: "noopener noreferrer" }
-            : {})}
-        >
-          {item.label}
-        </a>
-      ))
-    }
+  <div class="top-end">
+    <nav class="nav" aria-label="Primary">
+      {
+        site.nav.map((item) => (
+          <a
+            href={item.href}
+            {...(item.href.startsWith("http") || item.href.endsWith(".pdf")
+              ? { rel: "noopener noreferrer" }
+              : {})}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
     <button type="button" class="theme-toggle" data-theme-toggle>
       Dark
     </button>
-  </nav>
+  </div>
 </div>
