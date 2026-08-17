@@ -4,7 +4,7 @@ export const site = {
   focus: "Robotics · Computer Vision",
   statement:
     "Perception and autonomy — robots, inspection systems, and models that have to run on the machine.",
-  lede: "I ship computer-vision systems on factory AOI equipment at HyVision, and I build mobile robots on Jetson: ROS 2, SLAM, Nav2, and on-device inference. Same loop in both cases — data, the model, and the hardware it has to live on.",
+  lede: "At HyVision I build computer-vision systems for factory AOI equipment. I also build mobile robots on Jetson: ROS 2, SLAM, Nav2, and on-device inference.",
   affiliation: "HyVision System · Seongnam",
   location: "Seongnam, South Korea",
   email: "jakhon37@gmail.com",
