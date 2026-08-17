@@ -90,7 +90,7 @@ a:not(.skip):hover {
 
 .top-end {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-shrink: 0;
   gap: 1.15rem;
 }
@@ -111,15 +111,34 @@ a:not(.skip):hover {
 }
 
 .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0 0 0 1.15rem;
   border: 0;
   border-left: 1px solid var(--rule);
   background: none;
-  font: inherit;
-  font-size: inherit;
   color: var(--muted);
   cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  display: block;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
 }
 
 .theme-toggle:focus-visible {

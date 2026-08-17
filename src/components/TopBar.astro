@@ -19,8 +19,27 @@ import { site } from "../data/site";
         ))
       }
     </nav>
-    <button type="button" class="theme-toggle" data-theme-toggle>
-      Dark
+    <button
+      type="button"
+      class="theme-toggle"
+      data-theme-toggle
+      aria-label="Switch to dark theme"
+    >
+      <svg class="icon-moon" viewBox="0 0 16 16" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M6.2 1.4a6.6 6.6 0 0 0 8.4 8.4A6.7 6.7 0 1 1 6.2 1.4z"></path>
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 16 16" aria-hidden="true">
+        <circle cx="8" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.3"></circle>
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.3"
+          stroke-linecap="round"
+          d="M8 1.6v1.4M8 13v1.4M1.6 8h1.4M13 8h1.4M3.3 3.3l1 1M11.7 11.7l1 1M3.3 12.7l1-1M11.7 4.3l1-1"
+        ></path>
+      </svg>
     </button>
   </div>
 </div>
