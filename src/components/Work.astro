@@ -1,0 +1,22 @@
+---
+import { work } from "../data/work";
+---
+
+<section class="section" id="work" aria-labelledby="work-heading">
+  <h2 id="work-heading">Work</h2>
+  <div class="work-list">
+    {
+      work.map((item, index) => (
+        <article class="work">
+          <p class="work-index">{String(index + 1).padStart(2, "0")}</p>
+          <div>
+            <h3 class="work-title">{item.title}</h3>
+            <p class="work-field">{item.field}</p>
+            <p class="work-copy">{item.description}</p>
+            {item.result && <p class="work-result">{item.result}</p>}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

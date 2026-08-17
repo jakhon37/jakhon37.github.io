@@ -1,0 +1,56 @@
+---
+import { site } from "../data/site";
+---
+
+<div class="top">
+  <a class="wordmark" href="/">{site.name}</a>
+  <nav class="nav" aria-label="Primary">
+    {
+      site.nav.map((item) => (
+        <a
+          href={item.href}
+          {...(item.href.startsWith("http") || item.href.endsWith(".pdf")
+            ? { rel: "noopener noreferrer" }
+            : {})}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">{site.title} · {site.focus}</p>
+    <h1>{site.statement}</h1>
+    <p class="lede">{site.lede}</p>
+    <p class="affiliation">{site.affiliation}</p>
+    <p class="links">
+      {
+        site.links.map((link, index) => (
+          <>
+            {index > 0 && <span class="sep">/</span>}
+            <a
+              href={link.href}
+              {...(link.href.startsWith("http")
+                ? { rel: "noopener noreferrer" }
+                : {})}
+            >
+              {link.label}
+            </a>
+          </>
+        ))
+      }
+    </p>
+  </div>
+  <figure class="portrait-wrap">
+    <img
+      class="portrait"
+      src={site.portrait.src}
+      alt={site.portrait.alt}
+      width="460"
+      height="460"
+    />
+  </figure>
+</header>

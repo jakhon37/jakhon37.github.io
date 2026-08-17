@@ -1,0 +1,29 @@
+---
+import { publications } from "../data/publications";
+---
+
+<section class="section" id="research" aria-labelledby="research-heading">
+  <h2 id="research-heading">Research</h2>
+  <div class="pub-list">
+    {
+      publications.map((pub) => (
+        <article class="pub">
+          <h3 class="pub-title">{pub.title}</h3>
+          <p class="pub-meta">
+            <em>{pub.venue}</em> · {pub.year} · Cited by {pub.citedBy}
+          </p>
+          <p class="pub-links">
+            {pub.links.map((link, index) => (
+              <>
+                {index > 0 && <span class="sep"> / </span>}
+                <a href={link.href} rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              </>
+            ))}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</section>

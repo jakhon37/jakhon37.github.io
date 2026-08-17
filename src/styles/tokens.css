@@ -1,0 +1,15 @@
+:root {
+  --paper: #faf8f5;
+  --ink: #1a1917;
+  --muted: #5c574f;
+  --rule: #e4ddd4;
+  --link: #1d4f91;
+  --link-hover: #0f2f5c;
+  --focus: #1d4f91;
+  --serif: "Source Serif 4 Variable", "Iowan Old Style", "Palatino Linotype",
+    Palatino, Charter, Georgia, serif;
+  --sans: "Source Sans 3 Variable", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --measure: 64rem;
+  --pad: 1.5rem;
+}

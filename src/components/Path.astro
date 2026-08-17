@@ -1,0 +1,19 @@
+---
+import { path, education } from "../data/path";
+---
+
+<section class="section" id="path" aria-labelledby="path-heading">
+  <h2 id="path-heading">Path</h2>
+  <ul class="path-list">
+    {
+      path.map((item) => (
+        <li class="path-row">
+          <span class="path-dates">{item.dates}</span>
+          <span class="path-place">{item.place}</span>
+          <span class="path-role">{item.role}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="path-edu">{education.line}</p>
+</section>

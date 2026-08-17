@@ -1,0 +1,23 @@
+# Local development. Host files stay on disk; Docker is only the Node environment.
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - "4321:4321"
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+      ASTRO_TELEMETRY_DISABLED: "1"
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "4321"]
+    init: true
+    stdin_open: true
+    tty: true
+
+volumes:
+  node_modules:

@@ -1,0 +1,14 @@
+---
+import { site } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer" id="contact">
+  <p>
+    <a href={`mailto:${site.email}`}>{site.email}</a>
+    <span class="sep">/</span>
+    <a href="/Jakhongir_Nodirov_CV.pdf">Curriculum vitae</a>
+  </p>
+  <p class="footer-meta">{site.location} · © {year}</p>
+</footer>

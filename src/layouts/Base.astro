@@ -1,0 +1,84 @@
+---
+import "@fontsource-variable/source-serif-4";
+import "@fontsource-variable/source-sans-3";
+import "@fontsource-variable/source-sans-3/wght-italic.css";
+import "../styles/tokens.css";
+import "../styles/reset.css";
+import "../styles/layout.css";
+import { site } from "../data/site";
+import { publications } from "../data/publications";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const title = Astro.props.title ?? `${site.name} — AI Research Engineer`;
+const description = Astro.props.description ?? site.statement;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const ogImage = new URL("/og.png", site.url).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${site.url}/#person`,
+      name: site.name,
+      jobTitle: "AI Research Engineer",
+      url: site.url,
+      email: site.email,
+      image: new URL(site.portrait.src, site.url).href,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Seongnam",
+        addressCountry: "KR",
+      },
+      sameAs: [
+        "https://scholar.google.com/citations?user=yt1yJyAAAAAJ",
+        "https://github.com/jakhon37",
+        "https://www.linkedin.com/in/jakhongir-nodirov-jakhon37",
+        "https://x.com/jakhon_37",
+      ],
+    },
+    ...publications.map((pub) => ({
+      "@type": "ScholarlyArticle",
+      headline: pub.title,
+      author: pub.authors.map((author) => ({
+        "@type": "Person",
+        name: author.name,
+      })),
+      datePublished: String(pub.year),
+      url: pub.links.find((link) => link.label === "DOI")?.href,
+    })),
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="author" content={site.name} />
+    <meta name="theme-color" content="#faf8f5" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <slot />
+  </body>
+</html>
