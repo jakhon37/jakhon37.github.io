@@ -40,12 +40,12 @@ export const work: WorkItem[] = [
     title: "3D human avatars",
     field: "3D perception · AIVAR",
     description:
-      "From a single photograph to a textured 3D face and body, using morphable models (FLAME, SMPL, DECA), diffusion-based correction, and neural texture-matching. Deployed on AWS.",
+      "From a single photograph to a textured 3D face and body, using morphable models (FLAME, SMPL), diffusion-based correction, and neural texture-matching. Deployed on AWS.",
   },
   {
     title: "IP image verification",
     field: "Retrieval · AIVAR",
     description:
-      "A vector-search system for animation-character and logo protection: embed a query image, find near-duplicates, return a decision. Built for a government-backed digital IP project, with a demo web application.",
+      "A vector-search system for animation-character and logo protection: embed a query image, find near-duplicates, return a decision. Built for a government-backed digital IP project.",
   },
 ];
