@@ -4,6 +4,7 @@ export type WorkItem = {
   description: string;
   result?: string;
   href?: string;
+  video?: string;
 };
 
 export const work: WorkItem[] = [
@@ -11,9 +12,10 @@ export const work: WorkItem[] = [
     title: "autoJetsonBot",
     field: "Mobile robot · ROS 2",
     description:
-      "A Jetson Nano B01 platform with an ESP32 motor bridge, RPLidar, encoder odometry, MPU6050, and a web dashboard. Mapping with slam_toolbox, localization with AMCL, and Nav2 — same stack in Gazebo and on the real chassis.",
-    result: "Hardware + simulation · SLAM and Nav2",
+      "A Jetson Nano B01 robot with an ESP32 motor bridge, RPLidar, wheel-encoder odometry, and an MPU6050 fused into the estimate. Mapping with slam_toolbox, localization with AMCL, and Nav2 — same stack in Gazebo and on the chassis. Web dashboard for teleop and live scans.",
+    result: "Hardware + Gazebo · SLAM and Nav2",
     href: "https://github.com/jakhon37/autoJetsonBot",
+    video: "https://youtu.be/JTg8ff2hSGM",
   },
   {
     title: "Driver monitoring on the edge",

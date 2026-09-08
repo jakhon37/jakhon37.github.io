@@ -19,7 +19,17 @@ import { work } from "../data/work";
                 item.title
               )}
             </h3>
-            <p class="work-field">{item.field}</p>
+            <p class="work-field">
+              {item.field}
+              {item.video && (
+                <>
+                  <span class="sep">/</span>
+                  <a href={item.video} rel="noopener noreferrer">
+                    Video
+                  </a>
+                </>
+              )}
+            </p>
             <p class="work-copy">{item.description}</p>
             {item.result && <p class="work-result">{item.result}</p>}
           </div>

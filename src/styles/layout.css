@@ -197,7 +197,8 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
 }
 
 .links .sep,
-.footer .sep {
+.footer .sep,
+.work-field .sep {
   margin: 0 0.42rem;
   color: var(--sep);
   user-select: none;
