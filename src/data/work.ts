@@ -39,6 +39,14 @@ export const work: WorkItem[] = [
     result: "Line speed on AOI equipment · fine-grained defects",
   },
   {
+    title: "LabelMeV2",
+    field: "Annotation tooling",
+    description:
+      "A fork of labelme for large industrial images: faster load on big TIFF/JPG, 5000% zoom for small defects, and extra polygon editing. Published on PyPI.",
+    result: "Open source · pip install labelmev2",
+    href: "https://github.com/jakhon37/LabelMeV2",
+  },
+  {
     title: "3D human avatars",
     field: "3D perception · AIVAR",
     description:
