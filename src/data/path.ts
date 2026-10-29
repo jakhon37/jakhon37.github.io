@@ -6,7 +6,7 @@ export type PathItem = {
 
 export const path: PathItem[] = [
   {
-    dates: "2025 – now",
+    dates: "2025 – 2026",
     place: "HyVision System",
     role: "AI Research Engineer",
   },
