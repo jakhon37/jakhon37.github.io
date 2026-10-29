@@ -12,7 +12,7 @@ export const work: WorkItem[] = [
     title: "Camera-only docking",
     field: "Robot learning · autoJetsonBot",
     description:
-      "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet-18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. Tightening the judge showed every demonstration had ended before the stop command, so the first policy never learned to stop.",
+      "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. Tightening the judge showed every demonstration had ended before the stop command, so the first policy never learned to stop.",
     result: "Simulation only so far · ROS 2 Foxy, Humble and Jazzy",
     href: "https://github.com/jakhon37/autojetsonbot-learning",
   },
