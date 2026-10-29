@@ -9,6 +9,22 @@ export type WorkItem = {
 
 export const work: WorkItem[] = [
   {
+    title: "Camera-only docking",
+    field: "Robot learning · autoJetsonBot",
+    description:
+      "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet-18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. Tightening the judge showed every demonstration had ended before the stop command, so the first policy never learned to stop.",
+    result: "Simulation only so far · ROS 2 Foxy, Humble and Jazzy",
+    href: "https://github.com/jakhon37/autojetsonbot-learning",
+  },
+  {
+    title: "SmolVLA latency",
+    field: "VLA inference · LeRobot",
+    description:
+      "Where SmolVLA’s time goes on a small GPU, component by component, and what lower precisions change in its actions. The precision layout LeRobot actually runs is checked against LeRobot 0.6.1’s own loading, parameter by parameter. The vision encoder exports to FP16 ONNX and a strongly typed TensorRT engine, with parity checked before any speed-up is claimed.",
+    result: "Tooling smoke-tested on CPU · GPU numbers pending",
+    href: "https://github.com/jakhon37/smolvla-latency",
+  },
+  {
     title: "autoJetsonBot",
     field: "Mobile robot · ROS 2",
     description:
