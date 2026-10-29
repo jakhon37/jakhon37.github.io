@@ -12,16 +12,16 @@ export const work: WorkItem[] = [
     title: "Camera-only docking",
     field: "Robot learning · autoJetsonBot",
     description:
-      "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. Tightening the judge showed every demonstration had ended before the stop command, so the first policy never learned to stop.",
-    result: "Simulation only so far · ROS 2 Foxy, Humble and Jazzy",
+      "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. A stricter judge showed the demonstrations never ended on a stop. In the pre-registered rerun, the policy fell behind the servo from unseen start poses (16/30 against 27/30), and demonstrations recorded through the robot’s 62.2° lens fixed a lens failure (0/30 to 23/30).",
+    result: "Simulation only so far · pre-registered · ROS 2 Foxy, Humble and Jazzy",
     href: "https://github.com/jakhon37/autojetsonbot-learning",
   },
   {
     title: "SmolVLA latency",
     field: "VLA inference · LeRobot",
     description:
-      "Where SmolVLA’s time goes on a small GPU, component by component, and what lower precisions change in its actions. The precision layout LeRobot actually runs is checked against LeRobot 0.6.1’s own loading, parameter by parameter. The vision encoder exports to FP16 ONNX and a strongly typed TensorRT engine, with parity checked before any speed-up is claimed.",
-    result: "Tooling smoke-tested on CPU · GPU numbers pending",
+      "Where SmolVLA’s time goes, component by component, and what lower precisions change in its actions. The model exports as three ONNX graphs driven by a C++17 runtime; with the real LIBERO checkpoint on real frames they reproduce LeRobot’s actions to 6e-6 in FP32, and FP16 stays finite and moves the actions less than the BF16 LeRobot runs. The precision layout LeRobot actually runs is checked against LeRobot 0.6.1’s own loading, parameter by parameter.",
+    result: "CPU only so far · GPU and TensorRT numbers pending",
     href: "https://github.com/jakhon37/smolvla-latency",
   },
   {
