@@ -5,7 +5,7 @@ export const site = {
   statement:
     "Perception and autonomy — robots, inspection systems, and models that have to run on the machine.",
   lede: "At HyVision that was computer-vision on factory AOI equipment. On Jetson it is mobile robots: ROS 2, SLAM, Nav2, and on-device inference.",
-  affiliation: "Seongnam, South Korea",
+  affiliation: "HyVision System, 2025 – 2026 · Seongnam",
   location: "Seongnam, South Korea",
   email: "jakhon37@gmail.com",
   url: "https://jakhon37.github.io",
