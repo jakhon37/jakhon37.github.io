@@ -50,7 +50,7 @@ The site is a short portfolio, not a full CV. Edit typed data:
 - `src/data/work.ts` — featured work (keep this short)
 - `src/data/publications.ts` — papers and citation counts
 
-The complete record lives in `public/Jakhongir_Nodirov_CV.pdf`. Replace `public/portrait.jpg` to update the photo — it is shown in full, not cropped.
+The complete record lives in `public/Jakhongir_Nodirov_CV.pdf`. Replace `public/portrait.png` and `public/portrait-dark.png` to update the photo — it is shown in full, not cropped.
 
 Citation counts are hardcoded (see the comment in `publications.ts`). Update them when Scholar moves.
 

@@ -3,3 +3,6 @@ dist/
 .astro/
 .DS_Store
 *.log
+# Working copies of the CV; the published one is public/Jakhongir_Nodirov_CV.pdf
+/Jakhongir_Nodirov_Resume.pdf
+/Jakhongir_Nodirov_Resume_Robotics.pdf
