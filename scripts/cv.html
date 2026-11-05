@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jakhongir Nodirov CV</title>
+<style>
+  @page { size: Letter; margin: 0.42in 0.62in 0.4in; }
+  :root { --teal: #1f4e5f; --gray: #6b6b6b; --rule: #c9c9c9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 9.7pt; line-height: 1.17; color: #000; }
+  a { color: inherit; text-decoration: none; }
+  h1 { font-size: 22pt; line-height: 1.05; color: var(--teal); letter-spacing: 0.2px; }
+  .role { font-size: 12pt; color: var(--gray); margin-top: 1pt; }
+  .contact { margin-top: 5pt; }
+  .links { margin-top: 2pt; padding-bottom: 8pt; border-bottom: 1.3pt solid var(--teal); }
+  .links a { color: #1155cc; text-decoration: underline; }
+  .links b { margin-left: 8pt; } .links b:first-child { margin-left: 0; }
+  h2 { font-size: 10.2pt; color: var(--teal); letter-spacing: 0.3px; margin-top: 8pt; padding-bottom: 1.5pt; border-bottom: 0.7pt solid var(--rule); margin-bottom: 3pt; break-after: avoid; }
+  p.body { margin-top: 2pt; }
+  ul { padding-left: 15pt; margin-top: 1pt; }
+  li { margin-bottom: 0.9pt; }
+  .job, .project { margin-top: 4.5pt; break-inside: avoid; }
+  .job:first-of-type, .project:first-of-type { margin-top: 2pt; }
+  .name { font-weight: bold; font-size: 10.2pt; }
+  .where { color: var(--gray); }
+  .title { font-style: italic; }
+  .tag { font-style: italic; color: var(--gray); margin-left: 3pt; }
+  .project .name a { border-bottom: 0.5pt solid #9a9a9a; }
+  li a { color: #1155cc; text-decoration: underline; }
+  .edu { margin-top: 2pt; }
+  .dates { color: var(--gray); margin-left: 3pt; }
+  .langs { margin-top: 2pt; }
+</style>
+</head>
+<body>
+<h1>JAKHONGIR NODIROV</h1>
+<p class="role">Robotics / Computer Vision Engineer</p>
+<p class="contact">Gyeonggi-do, Seongnam-si, South Korea &nbsp;|&nbsp; 010-8025-0595 &nbsp;|&nbsp; jakhon37@gmail.com</p>
+<p class="links"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jakhongir-nodirov-jakhon37">linkedin.com/in/jakhongir-nodirov-jakhon37</a> <b>GitHub:</b> <a href="https://github.com/jakhon37">github.com/jakhon37</a> <b>Website:</b> <a href="https://jakhon37.github.io">jakhon37.github.io</a></p>
+
+<h2>SUMMARY</h2>
+<p class="body">Computer Vision / AI engineer with hands-on robotics experience – ROS2 navigation and SLAM, sensor integration (LiDAR, encoders, motor control), and embedded deployment on Jetson and microcontroller platforms. Full-cycle experience from perception model research through real-time edge inference, including production deployment of CNN-based vision systems on embedded hardware. Recent work covers robot learning with LeRobot and latency analysis of a vision-language-action model. Author of 2 peer-reviewed publications on 3D medical imaging. Comfortable across perception, embedded control, and on-device optimization.</p>
+
+<h2>TECHNICAL SKILLS</h2>
+<ul>
+  <li><b>Robotics:</b> ROS2, MicroROS, SLAM, Nav2, sensor integration (LiDAR, encoders, motor drivers), PID motor control</li>
+  <li><b>Robot Learning:</b> LeRobot, behavior cloning, PPO (Stable-Baselines3), MuJoCo</li>
+  <li><b>Embedded/Edge:</b> Jetson Nano, Jetson Xavier NX, Raspberry Pi, ESP32, TensorRT, ONNX, ONNX Runtime (C++), Yocto, PlatformIO, Arduino/C++</li>
+  <li><b>Perception &amp; ML:</b> PyTorch, PyTorch3D, TensorFlow, OpenCV, Object Detection/Segmentation/Tracking, Pose &amp; Landmark Estimation</li>
+  <li><b>Languages:</b> Python, C/C++</li>
+  <li><b>Deployment/Infra:</b> Docker/Compose, AWS EC2/S3, Oracle Cloud, CI/CD</li>
+</ul>
+
+<h2>WORK EXPERIENCE</h2>
+<div class="job">
+  <p><span class="name">HyVision System Inc.</span> <span class="where">Seongnam, South Korea</span></p>
+  <p><span class="title">AI Research Software Engineer</span> <span class="dates">Jun 2025 – Sep 2026</span></p>
+  <ul>
+    <li>Owned the full model lifecycle – dataset design, training, optimization, and on-device deployment – for CNN-based vision systems deployed on embedded/edge hardware in manufacturing equipment.</li>
+    <li>Deployed trained models for real-time inference on production hardware using TensorRT/ONNX edge optimization.</li>
+    <li>Worked directly with equipment integration, translating perception model output into reliable, low-latency decisions on physical machines.</li>
+  </ul>
+</div>
+<div class="job">
+  <p><span class="name">AIVAR</span> <span class="where">Seoul, South Korea</span></p>
+  <p><span class="title">AI Research Software Engineer</span> <span class="dates">Feb 2023 – Mar 2025</span></p>
+  <ul>
+    <li>Led development of a 3D human avatar reconstruction server application (3D morphable face/body models), deployed on AWS with Docker for consistent dev-to-production environments.</li>
+    <li>Built and shipped a deep-learning image verification system (vector embedding search) for a government-backed digital IP-protection initiative.</li>
+    <li>Researched and optimized CNN- and transformer-based vision models across multiple concurrent product lines; owned deployment and production monitoring.</li>
+  </ul>
+</div>
+<div class="job">
+  <p><span class="name">Gachon University – CT Lab</span> <span class="where">Seongnam, South Korea</span></p>
+  <p><span class="title">Graduate Researcher</span> <span class="dates">Sep 2020 – Feb 2023</span></p>
+  <ul>
+    <li>Designed a novel attention-based 3D U-Net architecture for volumetric MRI tumor segmentation, published in Sensors (2022).</li>
+    <li>Built VTK-based 3D volume reconstruction from MRI slices, published at IEEE ICTC (2021).</li>
+    <li>Contributed to applied CV lab projects including road-condition assessment and license-plate recognition.</li>
+  </ul>
+</div>
+
+<h2>SELECTED PROJECTS</h2>
+<div class="project">
+  <p><span class="name">Semiconductor Wafer Defect Inspection</span> <span class="tag">HyVision, 2025</span></p>
+  <ul>
+    <li>Built a high-precision defect inspection pipeline for 8-inch and 12-inch silicon wafers using CNN-based object detection, segmentation, and anomaly detection models, deployed on industrial edge GPUs inside wafer inspection equipment.</li>
+    <li>PyTorch, ONNX/TensorRT edge optimization · Deployed in production for continuous, high-precision defect detection with a low false-positive rate.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name">Consumer Electronics Surface Inspection</span> <span class="tag">HyVision, 2025-2026</span></p>
+  <ul>
+    <li>Built an end-to-end automated defect inspection pipeline (segmentation, detection, classification) for glass and metal enclosure parts, deployed on AOI machines in a tier-1 consumer electronics client's production line.</li>
+    <li>PyTorch, ONNX/TensorRT edge optimization · Achieved fine-grained defect detection at production line speed with a low false-positive rate.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/autoJetsonBot">Autonomous Driving Robot (ROS2)</a></span> <span class="tag">Side Project</span></p>
+  <ul>
+    <li>Designed and built a mobile robot from the ground up on Jetson Nano B01, running ROS2 Foxy, with a full software/hardware stack: motor control (TB6612 drivers), encoder feedback for odometry, RP-Lidar for range sensing, and a camera for perception.</li>
+    <li>Runs slam_toolbox mapping, AMCL localization, and Nav2 on the chassis and in Gazebo, with an ESP32 motor bridge and a web-based teleoperation interface (roslib.js). <a href="https://youtu.be/JTg8ff2hSGM">Demo video</a></li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/camera-only-docking">Camera-Only Docking</a></span> <span class="tag">Side Project, 2026</span></p>
+  <ul>
+    <li>Built the path from teleoperated demonstrations to a deployable policy: ROS2 bags into a LeRobot v3 dataset, a ResNet18 behavior-cloning policy exported to ONNX, and a C++ safety gate between every command source and the motors.</li>
+    <li>Ran pre-registered paired trials against a classical servo: 16/30 against 27/30 from unseen start poses, and demonstrations recorded through the robot's lens fixed a lens failure (0/30 to 23/30). Simulation only so far.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/smolvla-edge">SmolVLA Latency</a></span> <span class="tag">Side Project, 2026</span></p>
+  <ul>
+    <li>Exported the SmolVLA vision-language-action policy as three ONNX graphs driven by a C++17 runtime, reproducing LeRobot's actions to 6e-6 in FP32 on the real LIBERO checkpoint, and profiled where inference time goes by component. CPU results so far; GPU and TensorRT numbers pending.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/quad-loco">Quadruped Locomotion</a></span> <span class="tag">Side Project, 2026</span></p>
+  <ul>
+    <li>Trained a PPO velocity-tracking policy for a custom 12-DoF quadruped in MuJoCo, reaching 0.045 m/s tracking error against a 0.5 m/s command over a full 20 s episode with no falls; exported to ONNX.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/DMS/tree/production-v1">Driver Monitoring System (DMS)</a></span> <span class="tag">Lab Project</span></p>
+  <ul>
+    <li>Built a driver-monitoring pipeline on Jetson Xavier NX with nine TensorRT FP16 engines for face detection, landmarks, head pose, and eye and mouth state, plus alert logic, running end to end at 16–30 FPS. Tested on recorded video; not yet validated in a vehicle.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/mySegLib">mySegLib</a></span> <span class="tag">Open Source</span></p>
+  <ul>
+    <li>YAML-driven PyTorch segmentation framework with DDP multi-GPU training, mixed precision, chunked inference for large images, and ONNX export. CI runs the full pipeline on synthetic data.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name">3D Human Avatar Reconstruction</span> <span class="tag">AIVAR, 2023-2024</span></p>
+  <ul>
+    <li>Converted 2D images into textured 3D face/body avatars using 3D morphable face and body model architectures, with diffusion-based image correction and neural texture-matching; deployed on AWS with Docker.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name">IP Protection – Image Verification</span> <span class="tag">AIVAR, 2024</span></p>
+  <ul>
+    <li>Built a vector-embedding image verification system for animation-character and logo IP protection using CNN-based face/feature recognition models; part of a government-backed digital IP-protection project.</li>
+  </ul>
+</div>
+<div class="project">
+  <p><span class="name"><a href="https://github.com/jakhon37/attention-3d-unet">Attention 3D U-Net for Brain Tumor Segmentation</a></span> <span class="tag">CT Lab, 2021-2022</span></p>
+  <ul>
+    <li>Designed a novel attention-based 3D U-Net with multiple skip connections for volumetric MRI tumor segmentation, reaching whole-tumor Dice 0.8974 on BraTS-2020. Published in Sensors (2022), cited 130+ times.</li>
+  </ul>
+</div>
+
+<h2>EDUCATION</h2>
+<p class="edu"><span class="name">Gachon University</span> <span class="dates">2020.09 – 2022.08</span></p>
+<p>Master's Degree, Computer Engineering – GPA 4.17/4.5</p>
+
+<h2>PUBLICATIONS</h2>
+<ul>
+  <li><a href="https://doi.org/10.3390/s22176501">"Attention 3D U-Net with Multiple Skip Connections for Segmentation of Brain Tumor Images."</a> <i>Sensors</i> 22, no. 17 (2022): 6501.</li>
+  <li><a href="https://doi.org/10.1109/ICTC52510.2021.9621022">"3D Volume Reconstruction from MRI Slices based on VTK."</a> In <i>2021 International Conference on Information and Communication Technology Convergence (ICTC)</i>, pp. 689–692. IEEE, 2021.</li>
+</ul>
+
+<h2>LANGUAGES</h2>
+<p class="langs">Uzbek (Native) &nbsp;·&nbsp; English (Proficient) &nbsp;·&nbsp; Korean (Intermediate)</p>
+</body>
+</html>
