@@ -37,7 +37,7 @@ export const work: WorkItem[] = [
     description:
       "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. A stricter judge showed the demonstrations never ended on a stop. In the pre-registered rerun, the policy fell behind the servo from unseen start poses (16/30 against 27/30), and demonstrations recorded through the robot’s 62.2° lens fixed a lens failure (0/30 to 23/30).",
     result: "Simulation only so far · pre-registered · ROS 2 Foxy, Humble and Jazzy",
-    href: "https://github.com/jakhon37/autojetsonbot-learning",
+    href: "https://github.com/jakhon37/camera-only-docking",
   },
   {
     title: "SmolVLA latency",
@@ -45,7 +45,7 @@ export const work: WorkItem[] = [
     description:
       "Where SmolVLA’s time goes, component by component, and what lower precisions change in its actions. The model exports as three ONNX graphs driven by a C++17 runtime; with the real LIBERO checkpoint on real frames they reproduce LeRobot’s actions to 6e-6 in FP32, and FP16 stays finite and moves the actions less than the BF16 LeRobot runs. The precision layout LeRobot actually runs is checked against LeRobot 0.6.1’s own loading, parameter by parameter.",
     result: "CPU only so far · GPU and TensorRT numbers pending",
-    href: "https://github.com/jakhon37/smolvla-latency",
+    href: "https://github.com/jakhon37/smolvla-edge",
   },
   {
     title: "LabelMeV2",
