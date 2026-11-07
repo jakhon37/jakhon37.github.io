@@ -26,8 +26,8 @@ export const work: WorkItem[] = [
     title: "autoJetsonBot",
     field: "Mobile robot · ROS 2",
     description:
-      "A Jetson Nano B01 robot with an ESP32 motor bridge, RPLidar, wheel-encoder odometry, and an MPU6050 fused into the estimate. Mapping with slam_toolbox, localization with AMCL, and Nav2 — same stack in Gazebo and on the chassis. Web dashboard for teleop and live scans.",
-    result: "Hardware + Gazebo · SLAM and Nav2",
+      "A mobile robot and its Gazebo twin, running one ROS 2 stack. On the robot, a Jetson Xavier\u00a0NX runs ROS 2 Humble in Docker, and an ESP32 drives the motors and streams encoder and IMU data at 50\u00a0Hz into an EKF. slam_toolbox builds maps from the real RPLidar; AMCL and Nav2 navigate the twin, which is built from measurements of the chassis. Web dashboard for teleop and live scans.",
+    result: "Xavier\u00a0NX · ROS 2 Humble · SLAM on the robot, Nav2\u00a0in\u00a0Gazebo",
     href: "https://github.com/jakhon37/autoJetsonBot",
     video: "https://youtu.be/JTg8ff2hSGM",
   },

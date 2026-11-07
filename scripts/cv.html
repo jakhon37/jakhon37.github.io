@@ -98,8 +98,8 @@
 <div class="project">
   <p><span class="name"><a href="https://github.com/jakhon37/autoJetsonBot">Autonomous Driving Robot (ROS2)</a></span> <span class="tag">Side Project</span></p>
   <ul>
-    <li>Designed and built a mobile robot from the ground up on Jetson Nano B01, running ROS2 Foxy, with a full software/hardware stack: motor control (TB6612 drivers), encoder feedback for odometry, RP-Lidar for range sensing, and a camera for perception.</li>
-    <li>Runs slam_toolbox mapping, AMCL localization, and Nav2 on the chassis and in Gazebo, with an ESP32 motor bridge and a web-based teleoperation interface (roslib.js). <a href="https://youtu.be/JTg8ff2hSGM">Demo video</a></li>
+    <li>Designed and built a mobile robot and its Gazebo twin running one ROS2 stack: a Jetson Xavier NX on ROS2 Humble in Docker (first built on a Jetson Nano B01 with ROS2 Foxy), an ESP32-S3 driving TB6612 motor drivers and streaming encoder and IMU data at 50 Hz, an RP-Lidar for range sensing, and an ESP32-CAM for vision.</li>
+    <li>slam_toolbox builds maps from the real lidar, and AMCL localization and Nav2 navigate the Gazebo twin, built from measurements of the chassis; an EKF fuses wheel odometry and IMU, and a web dashboard handles teleoperation (roslib.js). <a href="https://youtu.be/JTg8ff2hSGM">Demo video</a></li>
   </ul>
 </div>
 <div class="project">
