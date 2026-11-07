@@ -26,7 +26,7 @@ Stop:
 docker compose down
 ```
 
-Host `npm` still works if you want it (`npm install && npm run dev`).
+Host `npm` still works if you want it (`npm install && npm run dev`, Node 22.12 or newer).
 
 ## Server (Docker)
 
@@ -48,22 +48,18 @@ The site is a short portfolio, not a full CV. Edit typed data:
 
 - `src/data/site.ts` — name, intro, links
 - `src/data/work.ts` — featured work (keep this short)
+- `src/data/path.ts` — jobs and education
 - `src/data/publications.ts` — papers and citation counts
 
-The complete record lives in `public/Jakhongir_Nodirov_CV.pdf`. To change it, edit `scripts/cv.html` and run `scripts/make-cv.sh`. Replace `public/portrait.png` and `public/portrait-dark.png` to update the photo — it is shown in full, not cropped.
+The complete record lives in `public/Jakhongir_Nodirov_CV.pdf`. To change it, edit `scripts/cv.html` and run `scripts/make-cv.sh`. The social image `public/og.png` comes from `scripts/og.html` through `scripts/make-og.sh`. Both scripts need Google Chrome or Chromium; set `CHROME` if it is somewhere else. Replace `public/portrait.png` and `public/portrait-dark.png` to update the photo — it is shown in full, not cropped.
 
 Citation counts are hardcoded (see the comment in `publications.ts`). Update them when Scholar moves.
 
 ## Deploy to GitHub Pages
 
-This is meant to live at the user site `https://jakhon37.github.io` (repo `jakhon37/jakhon37.github.io`).
+The site lives at the user site `https://jakhon37.github.io` (repo `jakhon37/jakhon37.github.io`, **Settings → Pages → Source = GitHub Actions**).
 
-1. Create the repository `jakhon37.github.io` if it does not exist.
-2. Push this project to `main`.
-3. In the repo: **Settings → Pages → Source = GitHub Actions**.
-4. The workflow in `.github/workflows/pages.yml` builds and publishes `dist/`.
-
-The old student page at `/mrjohn.github.io/` can stay or be archived. The resume URL is the site root.
+Every push to `main` deploys: `.github/workflows/pages.yml` builds with Node 22 and publishes `dist/`. The resume URL is the site root.
 
 ## Custom domain later
 
