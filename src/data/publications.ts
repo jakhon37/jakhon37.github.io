@@ -13,7 +13,7 @@ export type Publication = {
   links: PublicationLink[];
 };
 
-// Citation counts as of August 2026 (Google Scholar).
+// Citation counts as of November 2026 (Google Scholar).
 export const publications: Publication[] = [
   {
     title:
@@ -25,7 +25,7 @@ export const publications: Publication[] = [
     ],
     venue: "Sensors 22(17): 6501",
     year: 2022,
-    citedBy: 131,
+    citedBy: 138,
     gloss:
       "Attention 3D U-Net with multiple skip connections and MobileNetV2 blocks for volumetric MRI tumor segmentation.",
     links: [
@@ -49,7 +49,7 @@ export const publications: Publication[] = [
     ],
     venue: "ICTC, IEEE, pp. 689–692",
     year: 2021,
-    citedBy: 25,
+    citedBy: 26,
     gloss: "VTK-based reconstruction of 3D volumes from MRI slice stacks.",
     links: [
       { label: "DOI", href: "https://doi.org/10.1109/ICTC52510.2021.9621022" },

@@ -13,7 +13,7 @@ export const site = {
     src: "/portrait.png",
     alt: "Portrait of Jakhongir Nodirov",
   },
-  citationsAsOf: "August 2026",
+  citationsAsOf: "November 2026",
   nav: [
     { label: "Work", href: "#work" },
     { label: "Research", href: "#research" },
