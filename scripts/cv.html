@@ -112,7 +112,7 @@
 <div class="project">
   <p><span class="name"><a href="https://github.com/jakhon37/smolvla-edge">SmolVLA Latency</a></span> <span class="tag">Side Project, 2026</span></p>
   <ul>
-    <li>Exported the SmolVLA vision-language-action policy as three ONNX graphs driven by a C++17 runtime, reproducing LeRobot's actions to 6e-6 in FP32 on the real LIBERO checkpoint, and profiled where inference time goes by component. CPU results so far; GPU and TensorRT numbers pending.</li>
+    <li>Exported the SmolVLA vision-language-action policy as three ONNX graphs driven by a C++17 runtime, reproducing LeRobot's actions to 6e-6 in FP32 on the real LIBERO checkpoint, and ran them on TensorRT on a Jetson Xavier NX: one action chunk in 1.0 s at FP32 and 0.33 s at FP16, with FP16 actions within the range of LeRobot's own BF16.</li>
   </ul>
 </div>
 <div class="project">

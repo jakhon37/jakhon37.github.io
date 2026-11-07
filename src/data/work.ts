@@ -43,8 +43,8 @@ export const work: WorkItem[] = [
     title: "SmolVLA latency",
     field: "VLA inference · LeRobot",
     description:
-      "Where SmolVLA’s time goes, component by component, and what lower precisions change in its actions. The model exports as three ONNX graphs driven by a C++17 runtime; with the real LIBERO checkpoint on real frames they reproduce LeRobot’s actions to 6e-6 in FP32, and FP16 stays finite and moves the actions less than the BF16 LeRobot runs. The precision layout LeRobot actually runs is checked against LeRobot 0.6.1’s own loading, parameter by parameter.",
-    result: "CPU only so far · GPU and TensorRT numbers pending",
+      "Where SmolVLA’s time goes on a small GPU, and what lower precisions and TensorRT buy without changing its actions. The model exports as three ONNX graphs driven by a C++17 runtime on ONNX Runtime or TensorRT, checked against LeRobot at every split point with the real LIBERO checkpoint. On a Jetson Xavier NX one action chunk takes 1.0 s in FP32 and 0.33 s in FP16, with FP16 actions inside the range of the BF16 LeRobot itself runs, once TensorRT is held to the graphs’ FP32 layers.",
+    result: "Jetson Xavier NX · TensorRT 8.5 · 3.1× faster in FP16",
     href: "https://github.com/jakhon37/smolvla-edge",
   },
   {
