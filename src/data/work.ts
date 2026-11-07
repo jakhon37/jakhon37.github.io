@@ -26,7 +26,7 @@ export const work: WorkItem[] = [
     title: "autoJetsonBot",
     field: "Mobile robot · ROS 2",
     description:
-      "A mobile robot and its Gazebo twin, running one ROS 2 stack. On the robot, a Jetson Xavier\u00a0NX runs ROS 2 Humble in Docker, and an ESP32 drives the motors and streams encoder and IMU data at 50\u00a0Hz into an EKF. slam_toolbox builds maps from the real RPLidar; AMCL and Nav2 navigate the twin, which is built from measurements of the chassis. Web dashboard for teleop and live scans.",
+      "A mobile robot and its Gazebo twin, running one ROS 2 stack. On the robot, a Jetson Xavier\u00a0NX runs ROS 2 Humble in Docker, and an ESP32 drives the motors and streams encoder and IMU data at 50\u00a0Hz into an EKF. slam_toolbox builds maps from the real RPLidar; AMCL and Nav2 navigate the twin, which is built from measurements of the chassis. Web dashboard for teleop and live\u00a0scans.",
     result: "Xavier\u00a0NX · ROS 2 Humble · SLAM on the robot, Nav2\u00a0in\u00a0Gazebo",
     href: "https://github.com/jakhon37/autoJetsonBot",
     video: "https://youtu.be/JTg8ff2hSGM",
@@ -40,11 +40,11 @@ export const work: WorkItem[] = [
     href: "https://github.com/jakhon37/camera-only-docking",
   },
   {
-    title: "SmolVLA latency",
+    title: "SmolVLA Edge",
     field: "VLA inference · LeRobot",
     description:
-      "Where SmolVLA’s time goes on a small GPU, and what lower precisions and TensorRT buy without changing its actions. The model exports as three ONNX graphs driven by a C++17 runtime on ONNX Runtime or TensorRT, checked against LeRobot at every split point with the real LIBERO checkpoint. On a Jetson Xavier NX one action chunk takes 1.0 s in FP32 and 0.33 s in FP16, with FP16 actions inside the range of the BF16 LeRobot itself runs, once TensorRT is held to the graphs’ FP32 layers.",
-    result: "Jetson Xavier NX · TensorRT 8.5 · 3.1× faster in FP16",
+      "Where SmolVLA’s time goes on a small GPU, and what lower precisions and TensorRT buy without changing its actions. The model exports as three ONNX graphs driven by a C++17 runtime on ONNX Runtime or TensorRT, checked against LeRobot at every split point with the real LIBERO checkpoint. On a Jetson Xavier\u00a0NX one action chunk takes 1.0\u00a0s in FP32 and 0.33\u00a0s in FP16, with FP16 actions inside the range of the BF16 LeRobot itself runs, once TensorRT is held to the graphs’ FP32 layers.",
+    result: "Xavier\u00a0NX · TensorRT\u00a08.5 · 3.1×\u00a0faster\u00a0in\u00a0FP16",
     href: "https://github.com/jakhon37/smolvla-edge",
   },
   {
