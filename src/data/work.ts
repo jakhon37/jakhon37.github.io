@@ -68,10 +68,4 @@ export const work: WorkItem[] = [
       "A single-process driver monitor on a Jetson Xavier\u00a0NX: GStreamer capture into nine TensorRT FP16 engines for face detection, landmarks, head pose, eye and mouth state and an occlusion check, plus alert logic, with no PyTorch on the\u00a0board.",
     result: "Xavier\u00a0NX · TensorRT FP16 · 16–30\u00a0FPS end to\u00a0end",
   },
-  {
-    title: "IP image verification",
-    field: "Retrieval · AIVAR",
-    description:
-      "A vector-search system for animation-character and logo protection: embed a query image, find near-duplicates, return a decision. Built for a government-backed digital IP project.",
-  },
 ];
