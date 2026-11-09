@@ -9,18 +9,18 @@ export type WorkItem = {
 
 export const work: WorkItem[] = [
   {
+    title: "iPhone enclosure inspection",
+    field: "Industrial perception · HyVision for Apple",
+    description:
+      "A multi-stage AOI pipeline for 120-megapixel scans of iPhone enclosure parts, running on the production lines of Apple’s tier-1 supplier. A segmentation model finds the part, a lightweight CNN detector screens it tile by tile for more than a dozen defect classes, and segmentation and classification models outline and label each\u00a0defect.",
+    result: "In production · TensorRT in\u00a0C++ · full-scan detection\u00a08×\u00a0faster",
+  },
+  {
     title: "Wafer defect inspection",
     field: "Industrial perception · HyVision",
     description:
-      "Detection, segmentation, and anomaly models for 8-inch and 12-inch wafers, deployed on industrial GPUs inside the inspection tool.",
-    result: "In production · high precision · low false-positive rate",
-  },
-  {
-    title: "Consumer electronics inspection",
-    field: "Industrial perception · HyVision",
-    description:
-      "An end-to-end AOI pipeline — segmentation, detection, classification — at line speed on glass and metal enclosure parts for a tier-1 manufacturer.",
-    result: "Line speed on AOI equipment · fine-grained defects",
+      "CNN detectors for active-area and whitening defects inside the wafer inspection software, and a lightweight detector with a third of the baseline’s parameters. A parallel, batched TensorRT runner makes tile inference about\u00a011×\u00a0faster.",
+    result: "In production · TensorRT in\u00a0C++",
   },
   {
     title: "autoJetsonBot",
@@ -35,15 +35,15 @@ export const work: WorkItem[] = [
     title: "Camera-only docking",
     field: "Robot learning · autoJetsonBot",
     description:
-      "Learning to dock the robot from its camera alone, with a C++ safety gate between every command source and the motors. ROS 2 bags become a LeRobot v3 dataset and a ResNet18 behavior-cloning policy, exported to ONNX and scored by an ArUco judge in paired trials against a classical servo. A stricter judge showed the demonstrations never ended on a stop. In the pre-registered rerun, the policy fell behind the servo from unseen start poses (16/30 against 27/30), and demonstrations recorded through the robot’s 62.2° lens fixed a lens failure (0/30 to 23/30).",
-    result: "Simulation only so far · pre-registered · ROS 2 Foxy, Humble and Jazzy",
+      "A learning-from-demonstration stack for the robot: teleoperated demonstrations recorded as a LeRobot v3 dataset, behavior cloning policies running as ONNX in a ROS 2 node, a C++ safety gate as the only path to the motors, and a referee node that judges every method in paired trials against a classical servo.",
+    result: "Simulation · 303 tests · ROS\u00a02\u00a0Foxy,\u00a0Humble\u00a0and\u00a0Jazzy",
     href: "https://github.com/jakhon37/camera-only-docking",
   },
   {
     title: "SmolVLA Edge",
     field: "VLA inference · LeRobot",
     description:
-      "Where SmolVLA’s time goes on a small GPU, and what lower precisions and TensorRT buy without changing its actions. The model exports as three ONNX graphs driven by a C++17 runtime on ONNX Runtime or TensorRT, checked against LeRobot at every split point with the real LIBERO checkpoint. On a Jetson Xavier\u00a0NX one action chunk takes 1.0\u00a0s in FP32 and 0.33\u00a0s in FP16, with FP16 actions inside the range of the BF16 LeRobot itself runs, once TensorRT is held to the graphs’ FP32 layers.",
+      "Hugging Face’s 450M-parameter SmolVLA robot policy, exported as three ONNX graphs and run by a C++17 runtime on TensorRT, with every split point checked against LeRobot on the real LIBERO checkpoint. On a Jetson Xavier\u00a0NX an action chunk takes 0.33\u00a0s in FP16 against 1.0\u00a0s in FP32, with actions within the range of LeRobot’s own\u00a0BF16.",
     result: "Xavier\u00a0NX · TensorRT\u00a08.5 · 3.1×\u00a0faster\u00a0in\u00a0FP16",
     href: "https://github.com/jakhon37/smolvla-edge",
   },
@@ -56,25 +56,17 @@ export const work: WorkItem[] = [
     href: "https://github.com/jakhon37/Seamline",
   },
   {
-    title: "LabelMeV2",
-    field: "Annotation tooling",
-    description:
-      "A fork of labelme for large industrial images: faster load on big TIFF/JPG, 5000% zoom for small defects, and extra polygon editing. Published on PyPI.",
-    result: "Open source · pip install labelmev2",
-    href: "https://github.com/jakhon37/LabelMeV2",
-  },
-  {
     title: "3D human avatars",
     field: "3D perception · AIVAR",
     description:
-      "From a single photograph to a textured 3D face and body, using morphable models (FLAME, SMPL), diffusion-based correction, and neural texture-matching. Deployed on AWS.",
+      "From a single photograph to a textured 3D face and body, using morphable models (FLAME,\u00a0SMPL) trained and customized for Korean faces and bodies, plus diffusion image correction and neural texture matching. Deployed on\u00a0AWS.",
   },
   {
     title: "Driver monitoring on the edge",
     field: "On-device perception · Jetson",
     description:
-      "Head pose, facial landmarks, and seatbelt detection on grayscale day-and-night video, compiled to TensorRT and run on NVIDIA Jetson.",
-    result: "Day and night · TensorRT on device",
+      "A single-process driver monitor on a Jetson Xavier\u00a0NX: GStreamer capture into nine TensorRT FP16 engines for face detection, landmarks, head pose, eye and mouth state and an occlusion check, plus alert logic, with no PyTorch on the\u00a0board.",
+    result: "Xavier\u00a0NX · TensorRT FP16 · 16–30\u00a0FPS end to\u00a0end",
   },
   {
     title: "IP image verification",

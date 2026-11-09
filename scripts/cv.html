@@ -39,7 +39,7 @@
 <p class="links"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jakhongir-nodirov-jakhon37">linkedin.com/in/jakhongir-nodirov-jakhon37</a> <b>GitHub:</b> <a href="https://github.com/jakhon37">github.com/jakhon37</a> <b>Website:</b> <a href="https://jakhon37.github.io">jakhon37.github.io</a></p>
 
 <h2>SUMMARY</h2>
-<p class="body">Computer Vision / AI engineer with hands-on robotics experience – ROS2 navigation and SLAM, sensor integration (LiDAR, encoders, motor control), and embedded deployment on Jetson and microcontroller platforms. Full-cycle experience from perception model research through real-time edge inference, including production deployment of CNN-based vision systems on embedded hardware. Recent work covers robot learning with LeRobot and deploying a vision-language-action model on a Jetson. Author of 2 peer-reviewed publications on 3D medical imaging. Comfortable across perception, embedded control, and on-device optimization.</p>
+<p class="body">Computer Vision / AI engineer with hands-on robotics experience – ROS2 navigation and SLAM, sensor integration (LiDAR, encoders, motor control), and embedded deployment on Jetson and microcontroller platforms. Full-cycle experience from perception model research through real-time edge inference, including CNN-based defect inspection models running on production AOI lines. Recent work covers robot learning with LeRobot and deploying a vision-language-action model on a Jetson. Author of 2 peer-reviewed publications on 3D medical imaging. Comfortable across perception, embedded control, and on-device optimization.</p>
 
 <h2>TECHNICAL SKILLS</h2>
 <ul>
@@ -56,9 +56,9 @@
   <p><span class="name">HyVision System Inc.</span> <span class="where">Seongnam, South Korea</span></p>
   <p><span class="title">AI Research Software Engineer</span> <span class="dates">Jun 2025 – Sep 2026</span></p>
   <ul>
-    <li>Owned the full model lifecycle – dataset design, training, optimization, and on-device deployment – for CNN-based vision systems deployed on embedded/edge hardware in manufacturing equipment.</li>
-    <li>Deployed trained models for real-time inference on production hardware using TensorRT/ONNX edge optimization.</li>
-    <li>Worked directly with equipment integration, translating perception model output into reliable, low-latency decisions on physical machines.</li>
+    <li>Built CNN-based defect detection and segmentation models for automated optical inspection (AOI) equipment, owning each from labeling rules and dataset building through training and TensorRT optimization to integration in the C++ inspection software running on production lines.</li>
+    <li>Delivered models for two product lines: cosmetic inspection of iPhone enclosure parts for Apple through a tier-1 supplier, and semiconductor-wafer inspection.</li>
+    <li>Set up multi-GPU training on the team's new training server.</li>
   </ul>
 </div>
 <div class="job">
@@ -66,7 +66,7 @@
   <p><span class="title">AI Research Software Engineer</span> <span class="dates">Feb 2023 – Mar 2025</span></p>
   <ul>
     <li>Led development of a 3D human avatar reconstruction server application (3D morphable face/body models), deployed on AWS with Docker for consistent dev-to-production environments.</li>
-    <li>Built and shipped a deep-learning image verification system (vector embedding search) for a government-backed digital IP-protection initiative.</li>
+    <li>Built and shipped a deep-learning image verification system (vector embedding search) for animation-character and logo protection in a government-backed digital IP-protection initiative.</li>
     <li>Researched and optimized CNN- and transformer-based vision models across multiple concurrent product lines; owned deployment and production monitoring.</li>
   </ul>
 </div>
@@ -74,7 +74,7 @@
   <p><span class="name">Gachon University – CT Lab</span> <span class="where">Seongnam, South Korea</span></p>
   <p><span class="title">Graduate Researcher</span> <span class="dates">Sep 2020 – Feb 2023</span></p>
   <ul>
-    <li>Designed a novel attention-based 3D U-Net architecture for volumetric MRI tumor segmentation, published in Sensors (2022).</li>
+    <li>Designed a novel <a href="https://github.com/jakhon37/attention-3d-unet">attention-based 3D U-Net</a> with multiple skip connections for volumetric MRI tumor segmentation, reaching whole-tumor Dice 0.8974 on BraTS-2020; published in Sensors (2022), cited 130+ times.</li>
     <li>Built VTK-based 3D volume reconstruction from MRI slices, published at IEEE ICTC (2021).</li>
     <li>Contributed to applied CV lab projects including road-condition assessment and license-plate recognition.</li>
   </ul>
@@ -82,17 +82,17 @@
 
 <h2>SELECTED PROJECTS</h2>
 <div class="project">
-  <p><span class="name">Semiconductor Wafer Defect Inspection</span> <span class="tag">HyVision, 2025</span></p>
+  <p><span class="name">iPhone Enclosure Cosmetic Inspection</span> <span class="tag">HyVision for Apple, 2025-2026</span></p>
   <ul>
-    <li>Built a high-precision defect inspection pipeline for 8-inch and 12-inch silicon wafers using CNN-based object detection, segmentation, and anomaly detection models, deployed on industrial edge GPUs inside wafer inspection equipment.</li>
-    <li>PyTorch, ONNX/TensorRT edge optimization · Deployed in production for continuous, high-precision defect detection with a low false-positive rate.</li>
+    <li>Built the multi-stage inspection pipeline for 120-megapixel scans of iPhone enclosure parts, running on production AOI machines at Apple's tier-1 supplier. A segmentation model finds the part, a lightweight CNN detector screens it tile by tile for more than a dozen defect classes, and CNN segmentation and classification models outline and label each defect. Set labeling rules from the cosmetic specification, wrote multi-class auto-labeling and missed-label mining tools, and verified that Python and C++ TensorRT outputs matched.</li>
+    <li>PyTorch, ONNX, TensorRT, C++ · Raised detection mAP50 and recall by about a quarter each through rare-class sample generation, class balancing and specification-aligned labels, and the detector matched an off-the-shelf detector's accuracy at 1.6× its speed. A multi-threaded TensorRT runner made full-scan detection 8× faster, within the line's cycle time, and moving the segmentation model to TensorRT made it about 100× faster.</li>
   </ul>
 </div>
 <div class="project">
-  <p><span class="name">Consumer Electronics Surface Inspection</span> <span class="tag">HyVision, 2025-2026</span></p>
+  <p><span class="name">Semiconductor Wafer Defect Inspection</span> <span class="tag">HyVision, 2025-2026</span></p>
   <ul>
-    <li>Built an end-to-end automated defect inspection pipeline (segmentation, detection, classification) for glass and metal enclosure parts, deployed on AOI machines in a tier-1 consumer electronics client's production line.</li>
-    <li>PyTorch, ONNX/TensorRT edge optimization · Achieved fine-grained defect detection at production line speed with a low false-positive rate.</li>
+    <li>Developed the CNN detectors for active-area and whitening defects that run in the C++ inspection software on production equipment, building grayscale training sets from mask labels and model-assisted auto-labeling. Retraining on merged old and new data raised active-area mAP50 by about 12%, and PyTorch and ONNX outputs were verified to match.</li>
+    <li>PyTorch, ONNX, TensorRT, C++ · Designed a lightweight detector with a third of the baseline's parameters, trained on more than 50k tiles, plus a parallel, dynamically batched TensorRT runner. Together they reached about 11× the throughput of tile-by-tile inference with mAP50 within 3%, and the lightweight detector went on to power the iPhone enclosure inspection.</li>
   </ul>
 </div>
 <div class="project">
@@ -105,8 +105,7 @@
 <div class="project">
   <p><span class="name"><a href="https://github.com/jakhon37/camera-only-docking">Camera-Only Docking</a></span> <span class="tag">Side Project, 2026</span></p>
   <ul>
-    <li>Built the path from teleoperated demonstrations to a deployable policy: ROS2 bags into a LeRobot v3 dataset, a ResNet18 behavior-cloning policy exported to ONNX, and a C++ safety gate between every command source and the motors.</li>
-    <li>Ran pre-registered paired trials against a classical servo: 16/30 against 27/30 from unseen start poses, and demonstrations recorded through the robot's lens fixed a lens failure (0/30 to 23/30). Simulation only so far.</li>
+    <li>Built a learning-from-demonstration stack for a ROS2 robot: teleoperated demonstrations recorded as a LeRobot v3 dataset, a ResNet18 behavior-cloning policy exported to ONNX and run in a ROS2 node, a C++ safety gate as the only path to the motors, and a referee node that scores every method in pre-registered paired trials against a classical servo. Tested in simulation.</li>
   </ul>
 </div>
 <div class="project">
@@ -116,15 +115,9 @@
   </ul>
 </div>
 <div class="project">
-  <p><span class="name"><a href="https://github.com/jakhon37/quad-loco">Quadruped Locomotion</a></span> <span class="tag">Side Project, 2026</span></p>
-  <ul>
-    <li>Trained a PPO velocity-tracking policy for a custom 12-DoF quadruped in MuJoCo, reaching 0.045 m/s tracking error against a 0.5 m/s command over a full 20 s episode with no falls; exported to ONNX.</li>
-  </ul>
-</div>
-<div class="project">
   <p><span class="name"><a href="https://github.com/jakhon37/DMS/tree/production-v1">Driver Monitoring System (DMS)</a></span> <span class="tag">Lab Project</span></p>
   <ul>
-    <li>Built a driver-monitoring pipeline on Jetson Xavier NX with nine TensorRT FP16 engines for face detection, landmarks, head pose, and eye and mouth state, plus alert logic, running end to end at 16–30 FPS. Tested on recorded video; not yet validated in a vehicle.</li>
+    <li>Built a driver-monitoring pipeline on Jetson Xavier NX with nine TensorRT FP16 engines for face detection, landmarks, head pose, and eye and mouth state, plus alert logic, running end to end at 16–30 FPS. Tested on recorded driving video.</li>
   </ul>
 </div>
 <div class="project">
@@ -137,19 +130,7 @@
 <div class="project">
   <p><span class="name">3D Human Avatar Reconstruction</span> <span class="tag">AIVAR, 2023-2024</span></p>
   <ul>
-    <li>Converted 2D images into textured 3D face/body avatars using 3D morphable face and body model architectures, with diffusion-based image correction and neural texture-matching; deployed on AWS with Docker.</li>
-  </ul>
-</div>
-<div class="project">
-  <p><span class="name">IP Protection – Image Verification</span> <span class="tag">AIVAR, 2024</span></p>
-  <ul>
-    <li>Built a vector-embedding image verification system for animation-character and logo IP protection using CNN-based face/feature recognition models; part of a government-backed digital IP-protection project.</li>
-  </ul>
-</div>
-<div class="project">
-  <p><span class="name"><a href="https://github.com/jakhon37/attention-3d-unet">Attention 3D U-Net for Brain Tumor Segmentation</a></span> <span class="tag">CT Lab, 2021-2022</span></p>
-  <ul>
-    <li>Designed a novel attention-based 3D U-Net with multiple skip connections for volumetric MRI tumor segmentation, reaching whole-tumor Dice 0.8974 on BraTS-2020. Published in Sensors (2022), cited 130+ times.</li>
+    <li>Converted 2D images into textured 3D face/body avatars using 3D morphable face and body models, trained and customized for Korean faces and bodies, with diffusion-based image correction and neural texture-matching.</li>
   </ul>
 </div>
 
