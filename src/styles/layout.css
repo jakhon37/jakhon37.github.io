@@ -209,43 +209,46 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
   margin: 0;
 }
 
+/* In dark mode a soft light patch sits behind the head, so the dark hair
+   separates from the dark paper without an outline. */
+html[data-theme="dark"] .portrait-wrap {
+  background: radial-gradient(
+    circle at 50% 40%,
+    rgb(242 238 232 / 0.09),
+    transparent 55%
+  );
+}
+
+/* The photo is a cut-out, so it sits straight on the page. In light mode a
+   thin edge and a short cast shadow keep the white shirt off the paper. The
+   bottom fades where the shirt is cropped, corners first. */
 .portrait {
+  --tone: contrast(1) saturate(1);
+  --edge: drop-shadow(0 0 1px rgb(26 25 23 / 0.22));
+  --lift: drop-shadow(0 0.5rem 0.85rem rgb(26 25 23 / 0.12));
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
-  background: transparent;
+  filter: var(--tone) var(--edge) var(--lift);
   transition: filter 0.45s ease;
   -webkit-mask-image:
-    linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    linear-gradient(to bottom, #000 74%, transparent 100%),
+    radial-gradient(ellipse 78% 90% at 50% 30%, #000 72%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    linear-gradient(to bottom, #000 74%, transparent 100%),
+    radial-gradient(ellipse 78% 90% at 50% 30%, #000 72%, transparent 100%);
   mask-composite: intersect;
 }
 
-.portrait-dark {
-  display: none;
-}
-
-html[data-theme="dark"] .portrait-light {
-  display: none;
-}
-
-html[data-theme="dark"] .portrait-dark {
-  display: block;
-  /* This photo has a white background, so it is framed rather than faded. */
-  -webkit-mask-image: none;
-  mask-image: none;
-  border-radius: 0.75rem;
-  filter: brightness(0.92);
+html[data-theme="dark"] .portrait {
+  --edge: drop-shadow(0 0 0 transparent);
+  --lift: drop-shadow(0 0 0 transparent);
 }
 
 .portrait-wrap:hover .portrait,
 .portrait-wrap:focus-within .portrait {
-  filter: contrast(1.03) saturate(1.02);
+  --tone: contrast(1.03) saturate(1.02);
 }
 
 .section {
@@ -547,14 +550,6 @@ html[data-theme="dark"] .portrait-dark {
     display: none;
   }
 
-  html[data-theme="dark"] .portrait-dark {
-    display: none;
-  }
-
-  html[data-theme="dark"] .portrait-light {
-    display: block;
-  }
-
   a {
     color: var(--ink) !important;
     text-decoration: none !important;
@@ -565,7 +560,7 @@ html[data-theme="dark"] .portrait-dark {
   }
 
   .portrait {
-    filter: none;
+    filter: none !important;
   }
 }
 

@@ -11,6 +11,8 @@ export const site = {
   url: "https://jakhon37.github.io",
   portrait: {
     src: "/portrait.png",
+    // Background removed; the header shows this one in both themes.
+    cutout: "/portrait-cutout.webp",
     alt: "Portrait of Jakhongir Nodirov",
   },
   citationsAsOf: "November 2026",
