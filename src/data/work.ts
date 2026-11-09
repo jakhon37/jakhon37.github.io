@@ -52,7 +52,7 @@ export const work: WorkItem[] = [
     field: "Annotation and training tooling",
     description:
       "A desktop app for segmentation: label images, train a model, review its proposals least certain first, and retrain on what was accepted. Remote training runs detached over SSH and survives lost connections; large images open through tile pyramids. Built on mySegLib, a PyTorch library with multi-GPU DDP training, chunked inference, and ONNX export.",
-    result: "Open source · Electron and PyTorch · tested on VisA circuit boards",
+    result: "Open source · Electron and PyTorch · training on remote\u00a0GPUs",
     href: "https://github.com/jakhon37/Seamline",
   },
   {
