@@ -27,6 +27,7 @@ export const publications: Publication[] = [
       "SmolVLA on a Jetson Xavier NX with TensorRT, checked against LeRobot at every split point: fp16 runs 3.1× faster than fp32, with actions in the range of LeRobot’s own bf16.",
     links: [
       { label: "Paper", href: "https://www.preprints.org/manuscript/202611.0970/v1" },
+      { label: "DOI", href: "https://doi.org/10.20944/preprints202611.0970.v1" },
       { label: "Code", href: "https://github.com/jakhon37/smolvla-edge" },
     ],
   },
