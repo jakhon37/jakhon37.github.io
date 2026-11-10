@@ -10,7 +10,9 @@ import { publications } from "../data/publications";
         <article class="pub">
           <h3 class="pub-title">{pub.title}</h3>
           <p class="pub-meta">
-            <em>{pub.venue}</em> · {pub.year} · Cited by {pub.citedBy}
+            <em>{pub.venue}</em> · {pub.year}
+            {pub.citedBy !== undefined && ` · Cited by ${pub.citedBy}`}
+            {pub.status && ` · ${pub.status}`}
           </p>
           <p class="pub-links">
             {pub.links.map((link, index) => (

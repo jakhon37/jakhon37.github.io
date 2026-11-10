@@ -5,6 +5,7 @@ export type WorkItem = {
   result?: string;
   href?: string;
   video?: string;
+  paper?: string;
 };
 
 export const work: WorkItem[] = [
@@ -46,6 +47,7 @@ export const work: WorkItem[] = [
       "Hugging Face’s 450M-parameter SmolVLA robot policy, exported as three ONNX graphs and run by a C++17 runtime on TensorRT, with every split point checked against LeRobot on the real LIBERO checkpoint. On a Jetson Xavier\u00a0NX an action chunk takes 0.33\u00a0s in FP16 against 1.0\u00a0s in FP32, with actions within the range of LeRobot’s own\u00a0BF16.",
     result: "Xavier\u00a0NX · TensorRT\u00a08.5 · 3.1×\u00a0faster\u00a0in\u00a0FP16",
     href: "https://github.com/jakhon37/smolvla-edge",
+    paper: "https://www.preprints.org/manuscript/202611.0970/v1",
   },
   {
     title: "Seamline",

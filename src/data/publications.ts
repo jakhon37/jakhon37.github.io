@@ -8,13 +8,28 @@ export type Publication = {
   authors: { name: string; self?: boolean }[];
   venue: string;
   year: number;
-  citedBy: number;
+  citedBy?: number;
+  status?: string;
   gloss: string;
   links: PublicationLink[];
 };
 
 // Citation counts as of November 2026 (Google Scholar).
 export const publications: Publication[] = [
+  {
+    title:
+      "Faster but Not Different: Parity-\u2060Checked Deployment of the SmolVLA Robot Policy on a Jetson\u00a0Xavier\u00a0NX",
+    authors: [{ name: "J. Nodirov", self: true }],
+    venue: "Preprints.org",
+    year: 2026,
+    status: "Preprint",
+    gloss:
+      "SmolVLA on a Jetson Xavier NX with TensorRT, checked against LeRobot at every split point: fp16 runs 3.1× faster than fp32, with actions in the range of LeRobot’s own bf16.",
+    links: [
+      { label: "Paper", href: "https://www.preprints.org/manuscript/202611.0970/v1" },
+      { label: "Code", href: "https://github.com/jakhon37/smolvla-edge" },
+    ],
+  },
   {
     title:
       "Attention 3D U-Net with Multiple Skip Connections for Segmentation of Brain Tumor Images",

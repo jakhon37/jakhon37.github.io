@@ -29,6 +29,14 @@ import { work } from "../data/work";
                   </a>
                 </>
               )}
+              {item.paper && (
+                <>
+                  <span class="sep">/</span>
+                  <a href={item.paper} rel="noopener noreferrer">
+                    Paper
+                  </a>
+                </>
+              )}
             </p>
             <p class="work-copy">{item.description}</p>
             {item.result && <p class="work-result">{item.result}</p>}
