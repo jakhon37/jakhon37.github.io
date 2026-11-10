@@ -4,8 +4,8 @@ export const site = {
   focus: "Robotics · Computer Vision",
   statement:
     "Perception for robots and production lines, from training to the\u00a0device.",
-  lede: "At HyVision, defect inspection on iPhone and semiconductor production lines. On\u00a0Jetson, mobile robots with ROS\u00a02, SLAM, Nav2 and\u00a0TensorRT.",
-  affiliation: "HyVision System, 2025 – 2026 · Seongnam",
+  lede: "At HyVision I built defect inspection for iPhone and semiconductor lines. Now\u00a0I\u00a0build mobile robots on Jetson with ROS\u00a02, SLAM, Nav2\u00a0and\u00a0TensorRT.",
+  affiliation: "Seongnam, South Korea",
   location: "Seongnam, South Korea",
   email: "jakhon37@gmail.com",
   url: "https://jakhon37.github.io",
