@@ -3,8 +3,8 @@ export const site = {
   title: "AI Research Engineer",
   focus: "Robotics · Computer Vision",
   statement:
-    "Perception and autonomy — robots, inspection systems, and models that have to run on the machine.",
-  lede: "At HyVision that was computer-vision on factory AOI equipment. On Jetson it is mobile robots: ROS 2, SLAM, Nav2, and on-device inference.",
+    "Perception for robots and production lines, from training to the\u00a0device.",
+  lede: "At HyVision, defect inspection on iPhone and semiconductor production lines. On\u00a0Jetson, mobile robots with ROS\u00a02, SLAM, Nav2 and\u00a0TensorRT.",
   affiliation: "HyVision System, 2025 – 2026 · Seongnam",
   location: "Seongnam, South Korea",
   email: "jakhon37@gmail.com",
